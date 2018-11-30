@@ -28,8 +28,7 @@ echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>"$HOM
 chsh -s zsh
 
 # echo 无法解析 \n
-echo "oh-my-zsh install complete!"
-echo "Choose your color scheme now~"
+echo -e "oh-my-zsh install complete!\\nChoose your color scheme now~"
 "$HOME/.termux/colors.sh"
 
 echo "Choose your font now~"
