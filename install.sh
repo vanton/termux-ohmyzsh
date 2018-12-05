@@ -6,12 +6,15 @@ apt install -y git zsh
 git clone https://github.com/vanton/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" --depth 1
 
 # mv "$HOME/.termux" "$HOME/.termux.bak.$(date +%Y.%m.%d-%H:%M:%S)"
+cd "$HOME" || exit
+mkdir termux_bak
+
 # NOTE 维持原设置，不删除
-\cp -rf "$HOME/.termux" "$HOME/.termux.bak.$(date +%Y.%m.%d-%H:%M:%S)"
+# \cp -rf "$HOME/.termux" "$HOME/termux_bak/.termux.bak.$(date +%Y.%m.%d-%H:%M:%S)"
 \cp -rf "$HOME/termux-ohmyzsh/.termux" "$HOME/.termux"
 
 git clone git://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh" --depth 1
-mv "$HOME/.zshrc" "$HOME/.zshrc.bak.$(date +%Y.%m.%d-%H:%M:%S)"
+# mv "$HOME/.zshrc" "$HOME/termux_bak/.zshrc.bak.$(date +%Y.%m.%d-%H:%M:%S)"
 cp "$HOME/.oh-my-zsh/templates/zshrc.zsh-template" "$HOME/.zshrc"
 
 # ?? 删除以 ZSH_THEME 开头的行
@@ -28,11 +31,11 @@ echo "source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >>"$HOM
 chsh -s zsh
 
 # echo 无法解析 \n
-echo -e "oh-my-zsh install complete!\\nChoose your color scheme now~"
-"$HOME/.termux/colors.sh"
+# echo -e "oh-my-zsh install complete!\\nChoose your color scheme now~"
+# "$HOME/.termux/colors.sh"
 
-echo "Choose your font now~"
-"$HOME/.termux/fonts.sh"
+# echo "Choose your font now~"
+# "$HOME/.termux/fonts.sh"
 
 echo "Please restart Termux app..."
 
