@@ -4,7 +4,7 @@ termux-setup-storage
 apt update
 apt install -y git zsh
 # 判断本地仓库是否存在
-if [[ ! -d "$HOME/termux-ohmyzsh" ]]; then
+if [ ! -d "$HOME/termux-ohmyzsh" ]; then
 	git clone https://github.com/vanton/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" --depth 1
 else
 	cd "$HOME/termux-ohmyzsh" || exit
@@ -20,7 +20,7 @@ fi
 \cp -rf "$HOME/termux-ohmyzsh/.termux" "$HOME/.termux"
 
 # 判断本地仓库是否存在
-if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
+if [ ! -d "$HOME/.oh-my-zsh" ]; then
 	git clone git://github.com/robbyrussell/oh-my-zsh.git "$HOME/.oh-my-zsh" --depth 1
 else
 	cd "$HOME/.oh-my-zsh" || exit
@@ -38,7 +38,7 @@ sed -i '1iZSH_THEME="tjkirch"' "$HOME/.zshrc"
 # echo "alias chfont='$HOME/.termux/fonts.sh'" >>"$HOME/.zshrc"
 
 # 判断本地仓库是否存在
-if [[ ! -d "$HOME/.zsh-syntax-highlighting" ]]; then
+if [ ! -d "$HOME/.zsh-syntax-highlighting" ]; then
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$HOME/.zsh-syntax-highlighting" --depth 1
 else
 	cd "$HOME/.zsh-syntax-highlighting" || exit
