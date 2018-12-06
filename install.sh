@@ -7,7 +7,7 @@ git clone https://github.com/vanton/termux-ohmyzsh.git "$HOME/termux-ohmyzsh" --
 
 # mv "$HOME/.termux" "$HOME/.termux.bak.$(date +%Y.%m.%d-%H:%M:%S)"
 cd "$HOME" || exit
-mkdir termux_bak
+# mkdir termux_bak
 
 # NOTE 维持原设置，不删除
 # \cp -rf "$HOME/.termux" "$HOME/termux_bak/.termux.bak.$(date +%Y.%m.%d-%H:%M:%S)"
